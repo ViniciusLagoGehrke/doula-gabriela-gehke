@@ -6,7 +6,6 @@ import {
 } from "@builder.io/qwik-city";
 
 import { RouterHead } from "~/components/common/RouterHead";
-import { DarkThemeLauncher } from "~/components/common/DarkThemeLauncher";
 
 import "@fontsource-variable/inter";
 import globalStyles from "~/assets/styles/global.css?inline";
@@ -27,14 +26,12 @@ export default component$(() => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />
-        {/* <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
-          rel="stylesheet"
-        /> */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
         <RouterHead />
-        <DarkThemeLauncher />
       </head>
-      <body class="text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-gray-900 antialiased">
+      <body class="text-secondaryTextColor font-body tracking-tight bg-backgroundColor antialiased">
         <RouterOutlet />
         <ServiceWorkerRegister />
       </body>

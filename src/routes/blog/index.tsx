@@ -1,6 +1,7 @@
 import { component$, useStore, useTask$ } from "@builder.io/qwik";
 import { isServer } from "@builder.io/qwik/build";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import { Image } from "@unpic/qwik";
 
 import type { Post } from "~/types";
 import { fetchPosts } from "~/utils/posts";
@@ -31,12 +32,14 @@ export default component$(() => {
             <article class={`max-w-md mx-auto md:max-w-none grid gap-6 md:gap-8 ${post.image ? "md:grid-cols-2" : ""}`}>
               {post.image && (
                 <a class="relative block group" href={`/blog/${post.slug}`}>
-                  <div class="relative h-0 pb-[56.25%] md:pb-[75%] md:h-80 lg:pb-[56.25%] overflow-hidden bg-gray-400 dark:bg-slate-700 rounded shadow-lg">
+                  <div class="relative h-0 pb-[56.25%] md:pb-[75%] md:h-80 lg:pb-[56.25%] overflow-hidden bg-gray-400 rounded shadow-lg">
                     {post.image && (
-                      <img
+                      <Image
                         src={post.image}
-                        class="absolute inset-0 object-cover w-full h-full mb-6 rounded shadow-lg bg-gray-400 dark:bg-slate-700"
-                        sizes="(max-width: 900px) 400px, 900px"
+                        layout="constrained"
+                        class="absolute inset-0 object-cover w-full h-full mb-6 rounded shadow-lg bg-gray-400"
+                        width={400}
+                        height={900}
                         alt={post.title}
                       />
                     )}
@@ -57,7 +60,7 @@ export default component$(() => {
                 <p class="text-md sm:text-lg flex-grow">{post.excerpt || post.description}</p>
                 <footer class="mt-4">
                   <div>
-                    <span class="text-gray-500 dark:text-slate-400">
+                    <span class="text-gray-500">
                       <time dateTime={String(post.publishDate.getTime())}>
                         {post.publishDate.toLocaleDateString("en-us", {
                           year: "numeric",

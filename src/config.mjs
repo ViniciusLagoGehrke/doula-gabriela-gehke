@@ -1,12 +1,12 @@
 export const SITE = {
-  name: "Qwind",
+  name: "Doula Gabriela Gehrke",
 
   title:
-    "Qwind — Free template for Qwik + Tailwind CSS to build your new website.",
+    "Doula Gabriela Gehrke",
   description:
-    "Qwind is a free and ready to start template to make your website using Qwik and Tailwind CSS.",
+    "Know more about me and my work",
 
-  origin: "https://qwind.pages.dev",
+  origin: "",
   basePathname: "/",
   trailingSlash: true,
 };
