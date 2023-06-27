@@ -5,9 +5,9 @@ import { sitemetadata } from "~/data/sitemetadata";
 import type { DocumentHead, StaticGenerateHandler } from "@builder.io/qwik-city";
 import type { Service } from '~/types'
 
-export const useGetServiceBySlug = routeLoader$(({ params, status }): Service => {
-  const service = sitemetadata.services.find( service => service.title.toLocaleLowerCase() === params.slug);
-  
+export const useGetServiceBySlug = routeLoader$(async ({ params, status }): Promise<Service> => {
+  const service = sitemetadata.services.find( service => service.slug === params.slug);
+  console.log(service)
   if (!service) {
     status(404);
   }
@@ -24,37 +24,40 @@ export default component$(() => {
       onPending={() => <div>Loading...</div>}
       onRejected={() => <div>Error</div>}
       onResolved={(service: Service) => (
-        <section class="mx-auto py-8 sm:py-16 lg:py-20">
+        <section class="mx-auto py-6 sm:py-8 lg:py-10">
           <article>
-            <header class={service?.src ? "text-center" : ""}>
-              <h1 class="leading-tighter font-heading mx-auto mb-8 max-w-3xl px-4 text-4xl font-bold tracking-tighter sm:px-6 md:text-5xl">
+            <header class="mx-auto">
+              <h1 class="text-center leading-tighter font-heading font-header mx-auto mb-4 max-w-3xl px-2 text-4xl font-bold tracking-tighter sm:px-4 sm:mb-6 md:text-5xl">
                 {service.title}
               </h1>
-              <p class="mx-auto max-w-3xl px-4 sm:px-6">
-                {service.description}
-              </p>
-              {service.src ? (
+              <div class="mx-auto max-w-3xl flex flex-wrap px-4 sm:px-6 items-center">
+
+                <div class="mx-auto py-6 flex flex-col max-w-xs">
+                  <p class="px-2 sm:px-6">
+                    {service.description}
+                  </p>
+                  <h4 class="text-center p-2 sm:px-6 font-bold font-header">
+                  &euro;{service.value}
+                  </h4>
+                </div>
+                
                 <img
                   src={service.src}
-                  class="mx-auto mt-4 mb-6 max-w-full bg-gray-400 dark:bg-slate-700 sm:rounded-md lg:max-w-6xl"
+                  class="mx-auto max-w-xs bg-gray-400 dark:bg-slate-700 sm:rounded-md md:max-w-sm"
                   sizes="(max-width: 900px) 400px, 900px"
                   alt={service.title}
                   loading="eager"
-                  width={900}
-                  height={480}
+                  width={450}
+                  height={450}
                 />
-              ) : (
-                <div class="mx-auto max-w-3xl px-4 sm:px-6">
-                  <div class="border-t dark:border-slate-700" />
-                </div>
-              )}
+                
+              </div>
             </header>
-            <div>
+            <div class="p-8 max-w-3xl mx-auto space-y-4">
               {service.topics.map((topic, index) => (
-                <p key={index}>{topic}</p>
+                <p class='' key={index}>{topic}</p>
               ))}
             </div>
-            <h4 class="font-bold">{service.value}</h4>
           </article>
         </section>
       )}
@@ -62,7 +65,7 @@ export default component$(() => {
   );
 });
 
-export const onStaticGenerate: StaticGenerateHandler = () => {
+export const onStaticGenerate: StaticGenerateHandler = async () => {
   const services = sitemetadata.services;
 
   return {
@@ -74,7 +77,7 @@ export const head: DocumentHead = ({ resolveValue }) => {
   const service = resolveValue(useGetServiceBySlug);
 
   return {
-    title: service.title,
+    title: service?.title,
     meta: [
       {
         name: "description",
