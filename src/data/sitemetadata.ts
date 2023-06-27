@@ -22,7 +22,7 @@ export const sitemetadata = {
         "Oils and products used during massage are safe and natural, carefully selected for your sensitive skin. We want to ensure you feel comfortable and protected throughout the process.",
         "Enjoy this moment of self-care and well-being. Book your massage session for pregnant women today and allow me to help you fully enjoy this special phase of motherhood."
       ],
-      href: "massage",
+      slug: "massage",
       src: "https://source.unsplash.com/SMwCQZWayj0",
       value: 200
     },
@@ -39,7 +39,7 @@ export const sitemetadata = {
         "It is important to stress that the practice of yoga during pregnancy must be guided by a qualified professional and adapted to the individual needs of each pregnant woman. It is recommended that pregnant women consult their doctor before beginning any exercise programme during pregnancy.",
         "Yoga for pregnant women offers a valuable opportunity for self-care, balance and connection with the body and the baby, preparing the woman to experience this unique moment of motherhood in a fuller and more conscious way."
       ],
-      href: "yoga",
+      slug: "yoga",
       src: "https://source.unsplash.com/vSCQMFyrp7A",
       value: 200
     },
@@ -51,7 +51,7 @@ export const sitemetadata = {
         "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
         "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
       ],
-      href: "childbirth-training",
+      slug: "childbirth-training",
       src: "https://source.unsplash.com/GoabH6sEXek",
       value: 200
     },
@@ -66,7 +66,7 @@ export const sitemetadata = {
         "Developing the bond between caregivers and baby: Training can provide guidance on how to establish a healthy bond between caregivers and baby. Couples will learn about the importance of physical contact, loving communication and strategies to strengthen the family relationship during the transition to parenthood.",
         "Stress management and mutual support: Parenting is a wonderful experience, but it can also be challenging and stressful. Training can include sessions that address stress management strategies, self-care and mutual support between partners. This may involve practicing relaxation techniques, effective communication, setting healthy boundaries and identifying resources and support networks."
       ],
-      href: "couple-training",
+      slug: "couple-training",
       src: "https://source.unsplash.com/tqunk3qB_yU",
       value: 200
     },
@@ -78,7 +78,7 @@ export const sitemetadata = {
         "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
         "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
       ],
-      href: "post-childbirth",
+      slug: "post-childbirth",
       src: "https://source.unsplash.com/BYRAglAqrtQ",
       value: 200
     },
@@ -92,7 +92,7 @@ export const sitemetadata = {
         "Stimulating the immune system: Massage can have a positive effect on baby's immune system. Through gentle touch, massage helps stimulate blood circulation, which in turn can strengthen baby's immune system, helping him to fight off infection and illness.",
         "Promoting restful sleep: Massage can play an important role in establishing a relaxing routine for baby. By creating a calm and peaceful environment before bedtime, massage helps prepare baby for a more peaceful and restful sleep."
       ],
-      href: "shantala",
+      slug: "shantala",
       src: "https://source.unsplash.com/dZYI4ga2eUA",
       value: 200
     }

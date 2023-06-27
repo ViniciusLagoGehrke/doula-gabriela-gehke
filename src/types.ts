@@ -1,3 +1,12 @@
+export interface Service {
+  title: string;
+  description: string;
+  topics: string[];
+  slug: string;
+  src: string;
+  value: number;
+}
+
 export interface Post {
   /** A unique ID number that identifies a post. */
   id: string;

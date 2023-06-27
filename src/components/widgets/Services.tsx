@@ -15,7 +15,7 @@ export default component$(() => {
         </div>
         <div>
         <ul class="grid gap-8 mx-auto md:grid-cols-2 xl:grid-cols-3">
-          {sitemetadata.services.map(({ title, description, href, src, value }, index) => (
+          {sitemetadata.services.map(({ title, description, slug, src, value }, index) => (
             <li
               key={index}
               class="justify-self-center w-96 h-50"
@@ -24,7 +24,7 @@ export default component$(() => {
                 class="mx-auto flex flex-row "
                 aria-label={title}
                 title={title}
-                href={href}
+                href={`services/${slug}`}
               >
                 <div class="z-10 min-w-fit">
                   <Image
