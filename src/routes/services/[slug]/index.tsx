@@ -7,7 +7,7 @@ import type { Service } from '~/types'
 
 export const useGetServiceBySlug = routeLoader$(async ({ params, status }): Promise<Service> => {
   const service = sitemetadata.services.find( service => service.slug === params.slug);
-  console.log(service)
+  
   if (!service) {
     status(404);
   }
